@@ -6,13 +6,15 @@
 - 电脑上安装[图马斯特的TAC飞行摇杆驱动](https://support.thrustmaster.com/zh/product/tca-sidestick-airbus-edition-zh/)
 - Unreal Engine项目启用 **Windows RawInput** 插件 和 **VirtualCamera** 插件
 - Unreal Engine的项目设定里面导入 Content 目录中的  "Raw Input.ini"，他是适配 TAC飞行摇杆的参数设定。
-- 将 VCM_TACModifier.uasset 复制到UE的项目中适当的位置然后重新打开项目，然后打开这个Modifer编译一下。
+- 将 VCM_TACModifier.uasset 复制到UE的项目中适当的位置然后重新打开项目，然后打开这个Modifer编译一下。（注意，我这个用的UE 5.0.1 工程）
 
 
 ## 使用方法
 - 关卡中添加一个 CineCameraActor
-- 在 CineCameraActor 的 Details 面板中增加一个 VCam 组件到 CameraComponent层级下。 ![添加VCam](images/image1.png)
-- 在 VCam 的Detail里面的 Modifier Stack里面，增加一个Modifier,名字自己起，Generated Modifer选择"VCM_TACModifer" ![Modifier](images/image2.png)
+- 在 CineCameraActor 的 Details 面板中增加一个 VCam 组件到 CameraComponent层级下。 
+![添加VCam](images/image1.png)
+- 在 VCam 的Detail里面的 Modifier Stack里面，增加一个Modifier,名字自己起，Generated Modifer选择"VCM_TACModifer" 
+![Modifier](images/image2.png)
 - Modifier中可配置的参数如下（**应该根据实际的场景大小以及镜头需求来调整，至少前两个很重要**）：
   1. Axis XY Move Speed Factor: 相机水平移动（前后左右）时的速度调节因子
   2. Axis Z Move Speed Factor: 相机垂直移动的速度调节因子
